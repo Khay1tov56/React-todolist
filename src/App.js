@@ -14,14 +14,14 @@ function App() {
     const newTodo = todos.filter(item => item.id !== id);
     setTodos(newTodo)
     console.log(newTodo);
-    toast.error("Todo o'chirildi");
+    toast.error("Todo muvaffaqiyatli o'chirildi");
   };
 
   function editTodo(id) {
     const newArr = [...todos]
     const item = newArr.find(item => item.id === id);
     const text = prompt("edit todo", item.text);
-    toast.done("Todo qayta yangilandi");
+    toast.done("Todo muvaffaqiyatli qayta yangilandi");
 
     setTodos(newArr);
   };
@@ -33,7 +33,7 @@ function App() {
 
     setTodos(newTodoCheck)
 
-    toast.warning("Todo bajarildi");
+    toast.warning("Todo muvaffaqiyatli bajarildi");
 
   }
 
