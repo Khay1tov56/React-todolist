@@ -17,13 +17,15 @@ function App() {
     toast.error("Todo muvaffaqiyatli o'chirildi");
   };
 
-  function editTodo(id) {
+  function editTodo (id) {
     const newArr = [...todos]
     const item = newArr.find(item => item.id === id);
+    // console.log(item);
     const text = prompt("edit todo", item.text);
+    item.text = text
     toast.done("Todo muvaffaqiyatli qayta yangilandi");
 
-    setTodos(newArr);
+    setTodos([...newArr]);
   };
 
   function checkBox (id) {
